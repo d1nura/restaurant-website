@@ -1,0 +1,87 @@
+@import "./btnSelect";
+
+nav {
+  //background: green;
+  //border: 1px solid green;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 10;
+
+  button {
+    @include btnSelect(white, white, auto, auto);
+    margin: 0rem 2.5rem 0 0;
+    font-size: 1rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    display: inline;
+  }
+}
+
+.hamMenu {
+  //border: 1px solid red;
+  position: relative;
+  width: 2.8rem;
+  height: 1.8rem;
+  margin: 0rem 0 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+
+  .line {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    //border: 1px solidrgb(3, 3, 3);
+  }
+  &:hover {
+    #top {
+      width: 80%;
+    }
+    #middle {
+      width: 60%;
+    }
+    #bottom {
+      width: 80%;
+    }
+  }
+}
+
+.toggleHam {
+  width: 4rem;
+  height: 3rem;
+  z-index: 1000;
+  &:hover {
+    #top,
+    #bottom {
+      width: 100%;
+    }
+  }
+  .line {
+    background: black;
+    width: 100%;
+  }
+
+  #top {
+    transform: rotate(45deg);
+    transform-origin: left;
+  }
+
+  #middle {
+    transform: scale(0);
+    width: 0;
+  }
+  #bottom {
+    transform: rotate(-45deg);
+    transform-origin: left;
+  }
+}

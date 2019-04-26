@@ -1,0 +1,38 @@
+.hiddenMenu {
+  // position: fixed;
+  position: inherit;
+  transform: translateX(-100%);
+  transition: 0.2s;
+  width: 35%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+
+  button {
+    @include btnSelect(black, black, auto, auto);
+    margin: 1rem 0 0 2.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: inline;
+  }
+
+  #ulList {
+    // border: 1px solid red;
+    margin-top: 5.5rem;
+    transition: 0.5s;
+    a {
+      display: block;
+      margin-left: 2.5rem;
+      font-size: 2rem;
+      transition: 0.2s;
+      font-weight: bold;
+      width: 100%;
+      line-height: 3.8rem;
+      //border: 1px solid red;
+      color: black;
+    }
+  }
+}
+
+.toggleMenu {
+  transform: translateX(0%);
+}

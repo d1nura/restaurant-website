@@ -1,0 +1,257 @@
+@import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
+nav {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+nav button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: white;
+  border: 2px solid white;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin: 0rem 2.5rem 0 0;
+  font-size: 1rem;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  display: inline;
+}
+
+.hamMenu {
+  position: relative;
+  width: 2.8rem;
+  height: 1.8rem;
+  margin: 0rem 0 0 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamMenu .line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hamMenu:hover #top {
+  width: 80%;
+}
+
+.hamMenu:hover #middle {
+  width: 60%;
+}
+
+.hamMenu:hover #bottom {
+  width: 80%;
+}
+
+.toggleHam {
+  width: 4rem;
+  height: 3rem;
+  z-index: 1000;
+}
+
+.toggleHam:hover #top,
+.toggleHam:hover #bottom {
+  width: 100%;
+}
+
+.toggleHam .line {
+  background: black;
+  width: 100%;
+}
+
+.toggleHam #top {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.toggleHam #middle {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 0;
+}
+
+.toggleHam #bottom {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.hiddenMenu {
+  position: inherit;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 35%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+}
+
+.hiddenMenu button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin: 1rem 0 0 2.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: inline;
+}
+
+.hiddenMenu #ulList {
+  margin-top: 5.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hiddenMenu #ulList a {
+  display: block;
+  margin-left: 2.5rem;
+  font-size: 2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-weight: bold;
+  width: 100%;
+  line-height: 3.8rem;
+  color: black;
+}
+
+.toggleMenu {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro";
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (100%)[6];
+      grid-template-rows: repeat(6, 100%);
+}
+
+header {
+  background: url("/pics/wall2.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+#same {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+#same button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  width: 45%;
+  height: 2.5rem;
+  font-size: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#same button:hover {
+  color: white;
+  background: black;
+}
+
+#same #menuText {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 70%;
+}
+
+#same #menuText h1 {
+  font-size: 3rem;
+}
+
+#same #menuText p {
+  margin: 1rem 0 1rem 0;
+  line-height: 1.5rem;
+  word-spacing: 0.8rem;
+}
+/*# sourceMappingURL=index.css.map */

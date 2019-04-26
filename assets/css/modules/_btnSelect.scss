@@ -1,0 +1,12 @@
+@mixin btnSelect($borderClr, $color, $width, $height) {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: $color;
+  border: 2px solid $borderClr;
+  width: $width;
+  height: $height;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
