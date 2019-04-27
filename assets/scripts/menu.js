@@ -29,6 +29,10 @@ export function menu() {
         li[i].style.opacity = 1;
       }
     };
-    //hiddenMenu.style.height = window.innerHeight;
   }
+  /*hamMenu.onclick = () => {
+    hiddenMenu.style.height = window.innerHeight + "px";
+    console.log(window.innerHeight);
+    console.log(hiddenMenu);
+  };*/
 }

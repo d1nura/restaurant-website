@@ -1,0 +1,27 @@
+{
+  "news1": {
+    "title": "SPEACIAL EVENT DAY",
+    "heading": "MOTHER'S DAY AT QUAY",
+    "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio quisquam repellat."
+  },
+  "news2": {
+    "title": "TRADING HOURS",
+    "heading": "EASTER LONG WEEKENDS",
+    "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio quisquam repellat."
+  },
+  "news3": {
+    "title": "GOOD FOOD AWARDS",
+    "heading": "LOREM IPSUM CHEF OF THE YEAR",
+    "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio quisquam repellat."
+  },
+  "news4": {
+    "title": "QUAY BOTANIC DRINK",
+    "heading": "FOUR PILLARS GIN COLABORATION",
+    "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio quisquam repellat."
+  },
+  "news5": {
+    "title": "FROM THE EARTH",
+    "heading": "LOREM IPSUM NEW BOOK",
+    "p": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio quisquam repellat."
+  }
+}

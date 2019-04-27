@@ -1,12 +1,14 @@
 .hiddenMenu {
-  // position: fixed;
-  position: inherit;
+  position: fixed;
+  //position: absolute;
+
   transform: translateX(-100%);
   transition: 0.2s;
   width: 35%;
   height: 100%;
   background: white;
   overflow: hidden;
+  z-index: 100;
 
   button {
     @include btnSelect(black, black, auto, auto);

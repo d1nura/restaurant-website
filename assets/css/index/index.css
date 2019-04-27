@@ -1,23 +1,36 @@
 @import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
 nav {
+  position: relative;
   position: fixed;
   width: 100%;
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 3.8rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav img {
+  position: absolute;
+  color: white;
+  left: 48%;
+  right: 48%;
+  width: 2rem;
+  margin: 0 auto;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 nav button {
+  position: absolute;
+  right: 2.5rem;
   cursor: pointer;
   background: none;
   outline: none;
@@ -28,17 +41,23 @@ nav button {
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  margin: 0rem 2.5rem 0 0;
+  margin: 0rem 0rem 0 0;
   font-size: 1rem;
   padding: 0.4rem 1rem 0.4rem 1rem;
-  display: inline;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav button:hover {
+  background: white;
+  color: black;
 }
 
 .hamMenu {
-  position: relative;
+  position: fixed;
   width: 2.8rem;
   height: 1.8rem;
-  margin: 0rem 0 0 2.5rem;
+  margin: 1rem 0 0 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,7 +135,7 @@ nav button {
 }
 
 .hiddenMenu {
-  position: inherit;
+  position: fixed;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: 0.2s;
@@ -125,6 +144,7 @@ nav button {
   height: 100%;
   background: white;
   overflow: hidden;
+  z-index: 100;
 }
 
 .hiddenMenu button {
@@ -198,7 +218,7 @@ nav {
 }
 
 header {
-  background: url("/pics/wall2.jpg");
+  background: url("/pics/wall8.jpg");
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -211,6 +231,7 @@ header {
       grid-template-columns: 50% 50%;
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
+  background: #dbdbdb;
 }
 
 #same button {
@@ -253,5 +274,61 @@ header {
   margin: 1rem 0 1rem 0;
   line-height: 1.5rem;
   word-spacing: 0.8rem;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.gallery h1 {
+  padding: 5% 0 0 5%;
+  font-size: 3rem;
+}
+
+.gallery h1 a {
+  color: black;
+}
+
+.story {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.story button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: 40%;
+  height: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.story h2 {
+  border-bottom: 1px solid #946f6f;
+  margin-bottom: 2%;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.story p {
+  margin: 1% 0 5% 0;
 }
 /*# sourceMappingURL=index.css.map */

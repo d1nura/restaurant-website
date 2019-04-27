@@ -13,7 +13,7 @@
 }
 
 header {
-  background: url("/pics/wall2.jpg");
+  background: url("/pics/wall8.jpg");
   // border: 1px solid red;
   background-size: cover;
   background-position: top;
@@ -26,6 +26,7 @@ header {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
+  background: rgb(219, 219, 219);
 
   button {
     @include btnSelect(black, black, auto, auto);
@@ -53,5 +54,43 @@ header {
       line-height: 1.5rem;
       word-spacing: 0.8rem;
     }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50% 50%;
+
+  h1 {
+    ///text-align: center;
+    //justify-self: center;
+    //align-self: center;
+    padding: 5% 0 0 5%;
+    font-size: 3rem;
+    a {
+      color: black;
+    }
+  }
+}
+
+.story {
+  //border: 1px solid mediumspringgreen;
+  padding: 5%;
+  //opacity: 0;
+  button {
+    @include btnSelect(black, black, 40%, 1.5rem);
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    border-bottom: 1px solid rgb(148, 111, 111);
+    margin-bottom: 2%;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+  p {
+    margin: 1% 0 5% 0;
   }
 }

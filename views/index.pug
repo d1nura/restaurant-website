@@ -2,6 +2,7 @@ include includes/header.pug
 
 link(rel="stylesheet", href="css/index/index.css")
 
+
 body
   .container
     header
@@ -42,8 +43,20 @@ body
          Perferendis, asperiores.
         button READ MORE 
       #menuPic
-    .gallery#same1
 
+    .gallery#same1
+      -for (i=0;i<5;i++)
+        div(class="story")
+          h2 #{Object.values(obj)[i].title}
+          h3 #{Object.values(obj)[i].heading}
+          p #{Object.values(obj)[i].p}
+          button READ MORE
+    
+      h1 
+        |CONTINUE #[br] 
+        |READING OUR #[br] 
+        |NEWS #[a(href="#") #[u HERE]]  
+    
     footer   
 
   script(type="module" src="scripts/index.js")   

@@ -1,32 +1,58 @@
 @import "./btnSelect";
 
 nav {
+  position: relative;
   //background: green;
   //border: 1px solid green;
   position: fixed;
   width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 3.8rem;
   transition: 0.5s;
   z-index: 10;
+  display: flex;
+  //flex-direction: row;
+  align-items: center;
+  //justify-content: space-evenly;
+
+  img {
+    position: absolute;
+    color: white;
+    left: 48%;
+    right: 48%;
+    width: 2rem;
+    //justify-self: center;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: 0.5s;
+    //opacity: 0;
+    //text-align: center;
+    //display: inline;
+  }
 
   button {
+    position: absolute;
+    right: 2.5rem;
+    //display: inline;
     @include btnSelect(white, white, auto, auto);
-    margin: 0rem 2.5rem 0 0;
+    margin: 0rem 0rem 0 0;
     font-size: 1rem;
     padding: 0.4rem 1rem 0.4rem 1rem;
-    display: inline;
+    transition: 0.5s;
+    //display: inline;
+    //align-self: center;
+    &:hover {
+      background: white;
+      color: black;
+    }
   }
 }
 
 .hamMenu {
   //border: 1px solid red;
-  position: relative;
+  position: fixed;
   width: 2.8rem;
   height: 1.8rem;
-  margin: 0rem 0 0 2.5rem;
+  margin: 1rem 0 0 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
