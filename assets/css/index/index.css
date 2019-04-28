@@ -3,7 +3,7 @@ nav {
   position: relative;
   position: fixed;
   width: 100%;
-  height: 3.8rem;
+  height: 4.4rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 10;
@@ -42,7 +42,7 @@ nav button {
   font-weight: bold;
   letter-spacing: 0.1rem;
   margin: 0rem 0rem 0 0;
-  font-size: 1rem;
+  letter-spacing: 0.2rem;
   padding: 0.4rem 1rem 0.4rem 1rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -57,7 +57,7 @@ nav button:hover {
   position: fixed;
   width: 2.8rem;
   height: 1.8rem;
-  margin: 1rem 0 0 2.5rem;
+  margin: 1.3rem 0 0 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,10 +186,202 @@ nav button:hover {
           transform: translateX(0%);
 }
 
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 40% 75%;
+      grid-template-rows: 40% 75%;
+}
+
+.email {
+  background: #e6e6e6;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.email h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.email p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+}
+
+#emailText {
+  padding-left: 3.5rem;
+}
+
+#emailInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 10%;
+  margin-top: 1rem;
+}
+
+#emailInput input {
+  border: none;
+  border-bottom: 2px solid black;
+  width: 65%;
+  outline: none;
+  padding: 0 0 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  background: none;
+}
+
+#emailInput button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: 30%;
+  height: 2.2rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+}
+
+.rest {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65% 35%;
+      grid-template-columns: 65% 35%;
+  background: snow;
+}
+
+#firstPart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 55% 5%;
+      grid-template-rows: 30% 55% 5%;
+}
+
+#firstPart h1 {
+  margin-left: 3.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 4rem;
+}
+
+#firstPart #flex1 {
+  margin: 0 2rem 0 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#firstPart #flex1 h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#firstPart #flex1 h4 {
+  margin: 0.5rem 0 0rem 0;
+  font-size: 1.2rem;
+}
+
+#firstPart #flex1 p {
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+
+#firstPart #flex1 button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 5% 10% 5% 10%;
+  margin: 0.5rem 0 0.8rem 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#firstPart #flex1 button:hover {
+  background: black;
+  color: white;
+}
+
+#firstPart #flex1 address {
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+#firstPart #social {
+  margin-left: 3.5rem;
+}
+
+#firstPart #social img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+#secondPart {
+  background: url("/pics/ps.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#secondPart:hover {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.hiddenReservation {
+  width: 35%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: #e8faa8;
+  z-index: 20;
+}
+
+.resToggle {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Source Sans Pro";
+  scroll-behavior: smooth;
 }
 
 a {
@@ -213,8 +405,8 @@ nav {
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: (100%)[6];
-      grid-template-rows: repeat(6, 100%);
+  -ms-grid-rows: (100%)[5] 115%;
+      grid-template-rows: repeat(5, 100%) 115%;
 }
 
 header {
@@ -277,6 +469,8 @@ header {
 }
 
 .gallery {
+  background: #dbdbdb;
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -295,7 +489,12 @@ header {
 }
 
 .story {
-  padding: 5%;
+  position: relative;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,27 +507,76 @@ header {
           justify-content: center;
 }
 
+.story .storyBlc {
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  padding: 5%;
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+
 .story button {
   cursor: pointer;
   background: none;
   outline: none;
-  color: black;
-  border: 2px solid black;
+  color: white;
+  border: 2px solid white;
   width: 40%;
   height: 1.5rem;
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.1rem;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.story button:hover {
+  background: white;
+  color: black;
 }
 
 .story h2 {
-  border-bottom: 1px solid #946f6f;
+  border-bottom: 1px solid white;
   margin-bottom: 2%;
   font-size: 2rem;
   letter-spacing: 0.2rem;
 }
 
+.story h3 {
+  letter-spacing: 0.4rem;
+}
+
 .story p {
   margin: 1% 0 5% 0;
+  font-size: 1.2rem;
+  word-spacing: 0.5rem;
+}
+
+.story:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.story:hover .storyBlc {
+  opacity: 1;
+  color: white;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.story:hover .colorSet {
+  opacity: 0.6;
+}
+
+.colorSet {
+  position: absolute;
+  background: #030303;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
 }
 /*# sourceMappingURL=index.css.map */

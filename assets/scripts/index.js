@@ -12,7 +12,7 @@ function scroll() {
     let mainNav = document.querySelector("#mainNav");
     let img = mainNav.querySelector("img");
 
-    console.log(menu.getBoundingClientRect().top);
+    //console.log(menu.getBoundingClientRect().top);
 
     if (menu.getBoundingClientRect().top <= 70) {
       mainNav.style.background = "black";
@@ -35,6 +35,24 @@ function addPics() {
     menuPic[i].style.backgroundSize = "cover";
     menuPic[i].style.backgroundRepeat = "no-repeat";
     menuPic[i].style.backgroundPosition = "center";
+  }
+
+  let imgArr = [
+    "wall2.jpg",
+    "wall3.jpg",
+    "wall5.jpg",
+    "wall9.jpg",
+    "wall10.jpg"
+  ];
+
+  let story = document.querySelectorAll(".story");
+
+  for (let i = 0; i < story.length; i++) {
+    story[i].style.background = `url("pics/${imgArr[i]}")`;
+    //story[i].style.backgroundAttachment = "fixed";
+    story[i].style.backgroundSize = "cover";
+    story[i].style.backgroundRepeat = "no-repeat";
+    story[i].style.backgroundPosition = "center";
   }
 }
 

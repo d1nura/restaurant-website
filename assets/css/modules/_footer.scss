@@ -1,0 +1,127 @@
+footer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 40% 75%;
+}
+
+.email {
+  background: rgb(230, 230, 230);
+  //padding: 5%;
+  //border: 1px solid red;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  //grid-gap: 5%;
+
+  //justify-content: center;
+  align-content: center;
+  h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.1rem;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+    //width: 60%;
+  }
+}
+
+#emailText {
+  padding-left: 3.5rem;
+  //border: 1px solid red;
+  //align-self: center;
+}
+
+#emailInput {
+  //align-self: center;
+  //border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  margin-top: 1rem;
+
+  input {
+    border: none;
+    border-bottom: 2px solid black;
+    width: 65%;
+    //height: 4rem;
+    outline: none;
+    padding: 0 0 0.2rem 0.5rem;
+    font-size: 1.2rem;
+    background: none;
+  }
+  button {
+    @include btnSelect(black, black, 30%, 2.2rem);
+    margin-top: 1rem;
+  }
+}
+
+.rest {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background: rgb(255, 250, 250);
+  //border: 1px solid rgb(94, 255, 0);
+}
+
+#firstPart {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 55% 5%;
+  h1 {
+    // border: 1px solid red;
+    margin-left: 3.5rem;
+    align-self: center;
+    font-size: 4rem;
+  }
+  #flex1 {
+    margin: 0 2rem 0 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    h4 {
+      margin: 0.5rem 0 0rem 0;
+      font-size: 1.2rem;
+    }
+    p {
+      line-height: 1.5rem;
+      font-size: 1.1rem;
+    }
+    button {
+      @include btnSelect(black, black, auto, auto);
+      padding: 5% 10% 5% 10%;
+      margin: 0.5rem 0 0.8rem 0;
+      transition: 0.5s;
+      &:hover {
+        background: black;
+        color: white;
+      }
+    }
+    address {
+      font-style: normal;
+      font-size: 1.1rem;
+    }
+  }
+  #social {
+    margin-left: 3.5rem;
+    img {
+      width: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+#secondPart {
+  background: url("/pics/ps.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0);
+  transition: 1s;
+  //opacity: 0.4;
+  &:hover {
+    filter: grayscale(1);
+  }
+}

@@ -1,0 +1,16 @@
+.hiddenReservation {
+  //border: 1px solid red;
+  width: 35%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: 0.2s;
+  background: rgb(232, 250, 168);
+  z-index: 20;
+}
+
+.resToggle {
+  transform: translateX(0);
+}

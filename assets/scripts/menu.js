@@ -4,6 +4,8 @@ export function menu() {
   let hamMenu = document.querySelector(".hamMenu");
   let hiddenMenu = document.querySelector(".hiddenMenu");
   let ulList = document.querySelector("#ulList");
+  let hiddenResBtn = document.querySelector("#hiddenRes");
+  let hiddenRes = document.querySelector(".hiddenReservation");
 
   hamMenu.addEventListener("click", expandMenu);
 
@@ -30,9 +32,9 @@ export function menu() {
       }
     };
   }
-  /*hamMenu.onclick = () => {
-    hiddenMenu.style.height = window.innerHeight + "px";
-    console.log(window.innerHeight);
-    console.log(hiddenMenu);
-  };*/
+
+  hiddenResBtn.onclick = () => {
+    console.log("hiee");
+    hiddenRes.classList.toggle("resToggle");
+  };
 }

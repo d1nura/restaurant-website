@@ -47,16 +47,20 @@ body
     .gallery#same1
       -for (i=0;i<5;i++)
         div(class="story")
-          h2 #{Object.values(obj)[i].title}
-          h3 #{Object.values(obj)[i].heading}
-          p #{Object.values(obj)[i].p}
-          button READ MORE
+          .storyBlc
+            h2 #{Object.values(obj)[i].title}
+            h3 #{Object.values(obj)[i].heading}
+            p #{Object.values(obj)[i].p}
+            button READ MORE
+          div(class="colorSet")    
+
     
       h1 
         |CONTINUE #[br] 
         |READING OUR #[br] 
         |NEWS #[a(href="#") #[u HERE]]  
     
-    footer   
+    footer
+      include includes/footer/footer.pug   
 
   script(type="module" src="scripts/index.js")   

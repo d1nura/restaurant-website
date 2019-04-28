@@ -2,7 +2,7 @@ let express = require("express");
 let app = express();
 let fs = require("fs");
 
-const PORT = 3001;
+const PORT = 3003;
 
 let content = fs.readFileSync("newsData.json");
 let jsonCnt = JSON.parse(content);
