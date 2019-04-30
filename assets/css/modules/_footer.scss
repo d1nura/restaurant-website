@@ -1,19 +1,20 @@
+@import "./footerRes";
+
 footer {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 40% 75%;
+  grid-template-rows: 60% 100%;
+  @media screen and (max-width: 426px) {
+    grid-template-rows: auto;
+  }
 }
 
 .email {
   background: rgb(230, 230, 230);
-  //padding: 5%;
-  //border: 1px solid red;
   display: grid;
-  grid-template-columns: 50% 50%;
-  //grid-gap: 5%;
-
-  //justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-content: center;
+
   h1 {
     font-size: 2.8rem;
     letter-spacing: 0.1rem;
@@ -23,23 +24,22 @@ footer {
     font-size: 1.1rem;
     word-spacing: 0.2rem;
     letter-spacing: 0.1rem;
-    //width: 60%;
+    //width: 90%;
   }
 }
 
 #emailText {
+  //align-self
   padding-left: 3.5rem;
   //border: 1px solid red;
-  //align-self: center;
 }
 
 #emailInput {
-  //align-self: center;
   //border: 1px solid green;
   display: flex;
   flex-direction: column;
   padding-left: 10%;
-  margin-top: 1rem;
+  padding-top: 1rem;
 
   input {
     border: none;
@@ -57,9 +57,13 @@ footer {
   }
 }
 
+.email {
+  @include email();
+}
+
 .rest {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 70% 30%;
   background: rgb(255, 250, 250);
   //border: 1px solid rgb(94, 255, 0);
 }
@@ -68,6 +72,7 @@ footer {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 30% 55% 5%;
+  //border: 1px solid purple;
   h1 {
     // border: 1px solid red;
     margin-left: 3.5rem;
@@ -75,6 +80,7 @@ footer {
     font-size: 4rem;
   }
   #flex1 {
+    // border: 1px solid goldenrod;
     margin: 0 2rem 0 3.5rem;
     display: flex;
     justify-content: space-between;
@@ -124,4 +130,8 @@ footer {
   &:hover {
     filter: grayscale(1);
   }
+}
+
+.rest {
+  @include footerBtm();
 }

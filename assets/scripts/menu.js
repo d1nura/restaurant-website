@@ -6,6 +6,7 @@ export function menu() {
   let ulList = document.querySelector("#ulList");
   let hiddenResBtn = document.querySelector("#hiddenRes");
   let hiddenRes = document.querySelector(".hiddenReservation");
+  let closeBtn = document.querySelector("#closeBtn");
 
   hamMenu.addEventListener("click", expandMenu);
 
@@ -34,7 +35,9 @@ export function menu() {
   }
 
   hiddenResBtn.onclick = () => {
-    console.log("hiee");
-    hiddenRes.classList.toggle("resToggle");
+    hiddenRes.classList.add("resToggle");
+  };
+  closeBtn.onclick = () => {
+    hiddenRes.classList.remove("resToggle");
   };
 }

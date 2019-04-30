@@ -1,0 +1,63 @@
+@mixin footerBtm() {
+  @media screen and (max-width: 426px) {
+    .rest {
+      grid-template-columns: 100%;
+    }
+    #firstPart {
+      width: 100%;
+      padding: 8%;
+      grid-template-rows: auto;
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 4%;
+      }
+      h3 {
+        margin: 4% 0 4% 0;
+      }
+      #flex1 {
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #social {
+        margin: 8% 0 8% 0;
+      }
+    }
+
+    #secondPart {
+      width: 0;
+    }
+  }
+}
+
+@mixin email() {
+  @media screen and (max-width: 960px) {
+    #emailText,
+    #emailInput {
+      padding-top: 5% 10% 5% 10%;
+      input {
+        width: 80%;
+      }
+    }
+  }
+  @media screen and (max-width: 426px) {
+    h1 {
+      font-size: 1.5rem;
+      //margin-bottom: 5rem;
+    }
+    #emailInput,
+    #emailText {
+      padding: 10% 5% 10% 5%;
+      input {
+        width: 80%;
+      }
+    }
+    #emailInput {
+      padding-top: 0;
+    }
+    #emailText {
+      padding-bottom: 4%;
+    }
+  }
+}

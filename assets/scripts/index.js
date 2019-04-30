@@ -1,8 +1,10 @@
 console.log("pug...");
 
 import { menu } from "./menu.js";
+import { calender } from "./calender.js";
 
 menu();
+calender();
 
 function scroll() {
   window.addEventListener("scroll", catchScroll);

@@ -1,4 +1,5 @@
 @import "./btnSelect";
+@import "./menuRes";
 
 nav {
   position: relative;
@@ -25,7 +26,6 @@ nav {
     position: absolute;
     right: 2.5rem;
     @include btnSelect(white, white, auto, auto);
-    margin: 0rem 0rem 0 0;
     letter-spacing: 0.2rem;
     padding: 0.4rem 1rem 0.4rem 1rem;
     transition: 0.5s;
@@ -33,6 +33,7 @@ nav {
       background: white;
       color: black;
     }
+    //@include res();
   }
 }
 
@@ -67,6 +68,7 @@ nav {
       width: 80%;
     }
   }
+  @include ham();
 }
 
 .toggleHam {
@@ -97,4 +99,8 @@ nav {
     transform: rotate(-45deg);
     transform-origin: left;
   }
+}
+
+nav {
+  @include nav();
 }

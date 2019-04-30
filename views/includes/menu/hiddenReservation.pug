@@ -1,0 +1,39 @@
+
+img(src="/pics/close.png" id="closeBtn")
+
+
+.box
+  h1 MAKE A #[br]RESERVATION
+
+  h3 Select Dining Details to Book
+
+  #selectBox.same2  
+    select#lunch
+      option(disabled selected hidden) #[h1 Time] 
+      option Lunch
+      option Dinner 
+
+    select#people
+      option#user(disabled selected hidden) People
+      -for (i=1;i<7;i++)
+        option #{i} people  
+      option 7+ people        
+
+  h3 Select a Date 
+
+  #calenderBox.same2
+    #pBox  
+        p#prev #[u < prev]
+        p#month(style="font-weight:bold") 
+          span#month1
+          span#year
+        p#next #[u next >]
+
+    #calender
+        each $i in ["MON","TUE","WED","THU","FRI","SAT","SUN"]
+            p=$i
+        -for (i=0;i<42;i++)
+            #date 
+              p
+        
+    

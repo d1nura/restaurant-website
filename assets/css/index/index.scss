@@ -1,4 +1,5 @@
 @import "../modules/main";
+@import "../modules/responsive";
 
 .container {
   // border: 1px solid red;
@@ -7,7 +8,8 @@
   height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(5, 100%) 115%;
+  grid-template-rows: repeat(5, 100%) auto;
+  @include galRows();
 }
 
 header {
@@ -69,6 +71,7 @@ header {
       color: black;
     }
   }
+  @include gal();
 }
 
 .story {
@@ -93,6 +96,7 @@ header {
       background: white;
       color: black;
     }
+    @include galBtn();
   }
 
   display: flex;
@@ -124,6 +128,7 @@ header {
       opacity: 0.6;
     }
   }
+  @include galVisible();
 }
 
 .colorSet {
@@ -134,4 +139,8 @@ header {
   height: 100%;
   z-index: -1;
   opacity: 0;
+}
+
+.container {
+  @include same();
 }

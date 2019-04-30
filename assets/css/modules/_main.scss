@@ -2,6 +2,7 @@
 @import "../modules/hiddenMenu";
 @import "../modules/footer";
 @import "./createRes";
+//@import "./responsive";
 
 @mixin google-font($family) {
   @import url("http://fonts.googleapis.com/css?family=#{$family}");

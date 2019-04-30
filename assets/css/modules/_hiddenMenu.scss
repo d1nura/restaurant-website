@@ -1,3 +1,5 @@
+@import "./menuRes";
+
 .hiddenMenu {
   position: fixed;
   //position: absolute;
@@ -33,6 +35,7 @@
       color: black;
     }
   }
+  @include hiddenWidth();
 }
 
 .toggleMenu {
