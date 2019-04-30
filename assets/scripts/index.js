@@ -15,14 +15,15 @@ function scroll() {
     let img = mainNav.querySelector("img");
 
     //console.log(menu.getBoundingClientRect().top);
-
-    if (menu.getBoundingClientRect().top <= 70) {
-      mainNav.style.background = "black";
-      img.style.transform = "scale(1)";
-    }
-    if (menu.getBoundingClientRect().top >= 70) {
-      mainNav.style.background = "none";
-      img.style.transform = "scale(0)";
+    if (menu) {
+      if (menu.getBoundingClientRect().top <= 70) {
+        mainNav.style.background = "black";
+        img.style.transform = "scale(1)";
+      }
+      if (menu.getBoundingClientRect().top >= 70) {
+        mainNav.style.background = "none";
+        img.style.transform = "scale(0)";
+      }
     }
   }
 }

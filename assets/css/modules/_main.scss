@@ -8,6 +8,21 @@
   @import url("http://fonts.googleapis.com/css?family=#{$family}");
 }
 
+@mixin navColor() {
+  nav {
+    background: black;
+  }
+  @media screen and (max-width: 426px) {
+    grid-template-rows: 8% 100% auto;
+  }
+}
+
+@mixin bacImg() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 * {
   margin: 0;
   padding: 0;

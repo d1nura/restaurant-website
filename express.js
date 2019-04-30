@@ -15,4 +15,8 @@ app.get("/", (req, res) => {
   res.render("index", { obj: jsonCnt });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
 app.listen(PORT, () => console.log(`listening on port ${PORT}...`));

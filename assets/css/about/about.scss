@@ -1,0 +1,64 @@
+@import "../modules/main";
+
+.about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 4.4rem 100% auto;
+  //border: 1px solid red;
+  @include navColor();
+  @media screen and (max-width: 426px) {
+    grid-template-rows: 8% auto;
+  }
+}
+
+.aboutText {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  @media screen and (max-width: 426px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 1fr;
+
+    h1 {
+      padding-top: 5%;
+    }
+    #aboutT {
+      order: 2;
+      padding-bottom: 10%;
+      width: 90%;
+    }
+  }
+}
+
+#aboutT {
+  //border: 1px solid red;
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 5%;
+  }
+  p {
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+    margin-bottom: 5%;
+  }
+  a {
+    margin-top: 2rem;
+    color: black;
+    font-size: 1.1rem;
+  }
+}
+
+#aboutP {
+  //border: 1px solid mediumspringgreen;
+  // grid-area: p;
+  background: url("/pics/chef3.jpg");
+  @include bacImg();
+}
