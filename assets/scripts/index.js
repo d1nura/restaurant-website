@@ -2,9 +2,11 @@ console.log("pug...");
 
 import { menu } from "./menu.js";
 import { calender } from "./calender.js";
+import { course, c } from "./course.js";
 
 menu();
 calender();
+if (c) course();
 
 function scroll() {
   window.addEventListener("scroll", catchScroll);

@@ -242,13 +242,14 @@ footer {
 }
 
 .email {
-  background: #e6e6e6;
+  background: #75565f;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   -ms-flex-line-pack: center;
       align-content: center;
+  color: #b8b6b6;
 }
 
 .email h1 {
@@ -281,7 +282,7 @@ footer {
 
 #emailInput input {
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #b8b6b6;
   width: 65%;
   outline: none;
   padding: 0 0 0.2rem 0.5rem;
@@ -293,8 +294,8 @@ footer {
   cursor: pointer;
   background: none;
   outline: none;
-  color: black;
-  border: 2px solid black;
+  color: #b8b6b6;
+  border: 2px solid #b8b6b6;
   width: 30%;
   height: 2.2rem;
   text-align: center;
@@ -339,7 +340,7 @@ footer {
   display: grid;
   -ms-grid-columns: 70% 30%;
       grid-template-columns: 70% 30%;
-  background: snow;
+  background: #f7e7e3;
 }
 
 #firstPart {
@@ -693,7 +694,7 @@ header {
       grid-template-columns: 50% 50%;
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
-  background: #dbdbdb;
+  background: #f0ebe3;
 }
 
 #same button {
@@ -739,7 +740,7 @@ header {
 }
 
 .gallery {
-  background: #dbdbdb;
+  background: #f0ebe3;
   position: relative;
   display: -ms-grid;
   display: grid;

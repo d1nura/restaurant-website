@@ -4,6 +4,8 @@
 @import "./createRes";
 //@import "./responsive";
 
+$main-color: rgb(240, 235, 227);
+
 @mixin google-font($family) {
   @import url("http://fonts.googleapis.com/css?family=#{$family}");
 }
@@ -11,6 +13,7 @@
 @mixin navColor() {
   nav {
     background: black;
+    // position: fixed;
   }
   @media screen and (max-width: 426px) {
     grid-template-rows: 8% 100% auto;
@@ -21,6 +24,19 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@mixin textEffect() {
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 5%;
+  }
+  p {
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+    margin-bottom: 5%;
+  }
 }
 
 * {

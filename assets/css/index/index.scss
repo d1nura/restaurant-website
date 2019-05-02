@@ -26,7 +26,7 @@ header {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
-  background: rgb(219, 219, 219);
+  background: $main-color;
 
   button {
     @include btnSelect(black, black, auto, auto);
@@ -58,7 +58,7 @@ header {
 }
 
 .gallery {
-  background: rgb(219, 219, 219);
+  background: $main-color;
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

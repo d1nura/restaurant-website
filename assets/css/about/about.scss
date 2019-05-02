@@ -19,6 +19,8 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
+  background: $main-color;
+
   @media screen and (max-width: 426px) {
     grid-template-columns: 100%;
     grid-template-rows: 0.5fr 1fr;
@@ -39,16 +41,7 @@
   align-self: center;
   justify-self: center;
   width: 80%;
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 5%;
-  }
-  p {
-    word-spacing: 0.2rem;
-    letter-spacing: 0.05rem;
-    line-height: 1.5rem;
-    margin-bottom: 5%;
-  }
+  @include textEffect();
   a {
     margin-top: 2rem;
     color: black;
