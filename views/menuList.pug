@@ -1,0 +1,119 @@
+include includes/header.pug
+
+link(rel="stylesheet", href="css/menuList/menuList.css")
+
+body
+  .menuList
+    header
+        include includes/menu/fullMenu.pug
+
+    .menuDisc
+        #menuT
+            h1 MENU
+            p 
+             |Lorem ipsum dolor sit amet consectetur 
+             |adipisicing elit. Sint voluptate officia, 
+             |odit facilis qui quisquam.#[br]#[br]
+
+             |Lorem ipsum dolor sit amet consectetur 
+             |adipisicing elit. Odio ab distinctio tempore 
+             |repellat in itaque cum odit temporibus! Modi 
+             |autem dolore commodi ipsum magnam ut beatae
+             | id error quae explicabo.Lorem ipsum dolor sit amet consectetur 
+             |adipisicing elit. Sint voluptate officia.#[br]#[br] 
+
+             |Lorem ipsum dolor sit amet consectetur 
+             |adipisicing elit. Voluptatibus cum veniam natus 
+             |sit nemo aliquid quae quod veritatis expedita, 
+             |obcaecati rem! Libero nemo commodi fuga!  
+        #menuP
+
+    .menuText
+        #btnSet
+            button #[h1 10 COURSE MENU]
+            button #[h1 6 COURSE MENU]
+            button #[h1 DRINKS]
+
+        .course
+            #course10.c
+                p The ten course menu welcomes guests to delve further into Quay’s reimagination.
+
+                h2 10 COURSE
+                h3.h Oyster intervention
+
+                h3 Hand harvested seafood
+                p virgin soy, seaweed, aged vinegar
+
+                h3 Smoked eel cream
+                p young walnuts, milk skin, cold pressed almond oil.
+
+                h3 Southern squid
+                p hispi cabbage, barletta, golden orach
+
+                h3 Poolish crumpets
+                p smoked roe, cultured cream
+
+                h3 Steamed Mud crab custard
+                p Lotus seeds
+
+                h3 Smoked pig jowl
+                p shaved abalone, Lion's Mane mushrooms, sea cucumber crackling
+
+                h3 Maremma duck
+                p radicchio, black garlic, aged mirin
+                
+                h3 Crystallised Oloroso caramel
+                p prune cream, prune jam
+
+                h3.h White coral 
+                h3.h $285
+
+                h3.h Temperance pairing - $95
+                h3.h A round of drinks - $110
+                h3.h Quay wine pairing - $185
+                h3.h Premium wine pairing - $275 
+
+            #course6.c
+                p The six course menu with choice of main course is available daily for lunch and dinner
+
+                h2 SIX COURSE
+
+                h3 Hand harvested seafood
+                p virgin soy, seaweed, aged vinegar
+
+                h3 Smoked eel cream
+                p young walnuts, milk skin, cold pressed almond oil
+
+                h3 Poolish crumpets
+                p smoked roe, cultured cream
+
+                h3 Steamed Mud crab custard
+                p Lotus seeds
+
+
+                h3 Smoked pig jowl
+                p shaved abalone, Lion's Mane mushrooms, sea cucumber crackling
+
+                h3 Or
+
+                h3 Maremma duck
+                p radicchio, black garlic, aged mirin
+
+                h3 Crystallised Oloroso caramel
+                p prune cream, prune jam
+
+                h3.h Or
+                h3.h White coral
+                h3.h $225
+
+                h3.h Temperance pairing - $95
+                h3.h A round of drinks - $110
+                h3.h Quay wine pairing - $135
+                h3.h Premium wine pairing - $225   
+
+            #drin.c      
+
+    footer
+        include includes/footer/footer.pug 
+
+    script(type="module" src="/scripts/index.js")       
