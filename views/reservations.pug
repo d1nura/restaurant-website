@@ -1,0 +1,57 @@
+include includes/header.pug
+
+link(rel="stylesheet", href="/css/reservations/reservations.css")
+
+body
+    .reservations
+        header
+            include includes/menu/fullMenu.pug
+
+        
+        #resT
+            .resText
+                h1 MAKE A RESERVATION
+                p
+                |Lorem ipsum dolor sit amet, consectetur 
+                |dipisicing elit. Vel aut nam quidem 
+                |maiores amet, nostrum debitis fuga, omnis 
+                |umque suscipit magni aspernatur ipsum iure fugit?
+            .resPic
+
+        #resP
+            .formPic
+
+            .formText
+                h1 WAITLIST
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  |Dignissimos, ea itaque illo architecto vero odit blanditiis 
+                  |animi hic sint delectus? Accusantium neque distinctio
+                  | excepturi assumenda.
+
+                form
+
+                    input(type="text" id="fName" placeholder="First Name")  
+                    input(type="text" id="lName" placeholder="Last Name") 
+                    input(type="text" id="email" placeholder="Email")  
+                    input(type="text" id="mobile" placeholder="Mobile")   
+
+                    #g    
+                        label(for="pDate") Preferred Date
+                        input(type="text" id="pDate")
+                    #g.l    
+                        label(for="pTime") Preferred Time
+                        input(type="text" id="pTime")
+                    #g
+                        label(for="pTime") Is your time flexible
+                        input(type="text" id="pTime")
+                    #g.l
+                        label(for="pTime") Are your dates flexible 
+                        input(type="text" id="pTime")
+                    #g.s
+                        label(for="pTime") Number of Guests
+                        input(type="text" id="pTime")
+
+        footer
+            include includes/footer/footer.pug  
+
+        script(src="/scripts/index.js" type="module")     
