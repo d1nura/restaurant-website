@@ -23,4 +23,8 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
+app.get("/reservations", (req, res) => {
+  res.render("reservations");
+});
+
 app.listen(PORT, () => console.log(`listening on port ${PORT}...`));
