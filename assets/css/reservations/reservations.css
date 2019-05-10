@@ -242,14 +242,14 @@ footer {
 }
 
 .email {
-  background: #75565f;
+  background: #dce4e7;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   -ms-flex-line-pack: center;
       align-content: center;
-  color: #b8b6b6;
+  color: black;
 }
 
 .email h1 {
@@ -282,7 +282,7 @@ footer {
 
 #emailInput input {
   border: none;
-  border-bottom: 2px solid #b8b6b6;
+  border-bottom: 2px solid #020202;
   width: 65%;
   outline: none;
   padding: 0 0 0.2rem 0.5rem;
@@ -294,8 +294,8 @@ footer {
   cursor: pointer;
   background: none;
   outline: none;
-  color: #b8b6b6;
-  border: 2px solid #b8b6b6;
+  color: #030303;
+  border: 2px solid #050505;
   width: 30%;
   height: 2.2rem;
   text-align: center;
@@ -340,7 +340,7 @@ footer {
   display: grid;
   -ms-grid-columns: 70% 30%;
       grid-template-columns: 70% 30%;
-  background: #f7e7e3;
+  background: #d5dddb;
 }
 
 #firstPart {
@@ -644,7 +644,7 @@ footer {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Ubuntu";
   scroll-behavior: smooth;
 }
 
@@ -661,17 +661,6 @@ nav {
   transition: 0.5s;
 }
 
-header nav {
-  background: black;
-}
-
-@media screen and (max-width: 426px) {
-  header {
-    -ms-grid-rows: 8% 100% auto;
-        grid-template-rows: 8% 100% auto;
-  }
-}
-
 .reservations {
   position: absolute;
   width: 100%;
@@ -682,6 +671,24 @@ header nav {
       grid-template-columns: 100%;
   -ms-grid-rows: 4.4rem 100% auto auto;
       grid-template-rows: 4.4rem 100% auto auto;
+}
+
+.reservations nav {
+  background: black;
+}
+
+@media screen and (max-width: 426px) {
+  .reservations {
+    -ms-grid-rows: 8% 100% auto;
+        grid-template-rows: 8% 100% auto;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .reservations {
+    -ms-grid-rows: 4.4rem auto;
+        grid-template-rows: 4.4rem auto;
+  }
 }
 
 #resT {
@@ -697,6 +704,50 @@ header nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#resT .resText {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 80%;
+}
+
+#resT .resText h1 {
+  font-size: 3rem;
+  margin-bottom: 5%;
+}
+
+#resT .resText p {
+  word-spacing: 0.2rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 426px) {
+  #resT {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 400px auto;
+        grid-template-rows: 400px auto;
+  }
+  #resT .resText {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 1rem 0 1rem 0;
+  }
+  #resT .resText h1 {
+    font-size: 2.5rem;
+  }
+  #resT .resPic {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 #resP {
@@ -727,58 +778,93 @@ header nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 10%;
 }
 
+#resP .formText h1 {
+  font-size: 3rem;
+  margin-bottom: 5%;
+}
+
+#resP .formText p {
+  word-spacing: 0.2rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  margin-bottom: 5%;
+}
+
+#resP .formText h1,
+#resP .formText p {
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 426px) {
+  #resP {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 500px auto;
+        grid-template-rows: 500px auto;
+  }
+}
+
 form {
-  border: 1px solid red;
   margin: 5% 0 5% 0;
 }
 
-form input {
-  width: 48%;
-  margin: 2% 0 2% 0;
-  height: 2.2rem;
-  border: 2px solid black;
+form input,
+form select {
   background: none;
+  border: 2px solid black;
+  outline: none;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 form #email,
 form #mobile {
-  width: 99%;
+  display: block;
+  width: 100%;
 }
 
-form #lName {
-  float: right;
+form button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: 35%;
+  height: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
 }
 
-form label {
-  border: 1px solid #a09c76;
-  width: 30%;
-}
-
-#g {
+#compact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.l {
-  float: right;
+#compact #c {
+  width: 100%;
 }
 
-.s input {
-  width: 99%;
+#compact select {
+  color: #727272;
+  width: 105%;
+  height: 2.7rem;
 }
 
-.s label {
-  width: auto;
+#compact #c:nth-child(1),
+#compact #fName {
+  margin-right: 2.5rem;
+}
+
+label {
+  letter-spacing: 0.1rem;
 }
 /*# sourceMappingURL=reservations.css.map */

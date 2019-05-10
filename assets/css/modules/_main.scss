@@ -39,11 +39,17 @@ $main-color: rgb(240, 235, 227);
   }
 }
 
+@mixin screenSize($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   @include google-font("Source Sans Pro");
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Ubuntu";
   scroll-behavior: smooth;
 }
 

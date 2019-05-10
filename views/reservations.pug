@@ -12,10 +12,15 @@ body
             .resText
                 h1 MAKE A RESERVATION
                 p
-                |Lorem ipsum dolor sit amet, consectetur 
-                |dipisicing elit. Vel aut nam quidem 
-                |maiores amet, nostrum debitis fuga, omnis 
-                |umque suscipit magni aspernatur ipsum iure fugit?
+                    |Lorem ipsum dolor sit amet, consectetur 
+                    |dipisicing elit. Vel aut nam quidem 
+                    |maiores amet, nostrum debitis fuga, omnis 
+                    |umque suscipit magni aspernatur ipsum iure fugit?#[br]#[br]
+
+                    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem pariatur earum vitae itaque dolore enim explicabo architecto distinctio alias consequatur praesentium minima sint sed perspiciatis laboriosam, numquam voluptatum quia beatae, assumenda illum ipsa nostrum ullam. Aut numquam repudiandae neque vel.
+                    |Lorem ipsum, dolor sit amet consectetur adipisicing elit. At ullam velit voluptate officia iusto quae. Totam consequatur iste sequi earum amet nulla! Velit, laboriosam et. #[br]#[br] 
+
+                    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae adipisci ea provident itaque officiis fugiat? Cumque aliquam debitis fugit et!  
             .resPic
 
         #resP
@@ -29,27 +34,36 @@ body
                   | excepturi assumenda.
 
                 form
-
-                    input(type="text" id="fName" placeholder="First Name")  
-                    input(type="text" id="lName" placeholder="Last Name") 
+                    #compact
+                        input(type="text" id="fName" placeholder="First Name")  
+                        input(type="text" id="lName" placeholder="Last Name") 
                     input(type="text" id="email" placeholder="Email")  
                     input(type="text" id="mobile" placeholder="Mobile")   
 
-                    #g    
-                        label(for="pDate") Preferred Date
-                        input(type="text" id="pDate")
-                    #g.l    
-                        label(for="pTime") Preferred Time
-                        input(type="text" id="pTime")
-                    #g
-                        label(for="pTime") Is your time flexible
-                        input(type="text" id="pTime")
-                    #g.l
-                        label(for="pTime") Are your dates flexible 
-                        input(type="text" id="pTime")
-                    #g.s
-                        label(for="pTime") Number of Guests
-                        input(type="text" id="pTime")
+                    #compact
+                        #c   
+                            label(for="pDate") Preferred Date#[br]
+                            input(type="text" id="pDate")
+                        #c    
+                            label(for="pTime") Preferred Time#[br]
+                            input(type="text" id="pTime")
+                    
+                    #compact
+                        #c
+                            label(for="pTime") Is your time flexible#[br]
+                            select
+                                option(selected) Yes
+                                option No
+                        #c    
+                            label(for="pTime") Are your dates flexible #[br]
+                            select
+                                option(selected) Yes
+                                option No
+                    
+                    label(for="pTime") Number of Guests#[br]
+                    input(type="text" id="pTime")
+
+                    button SUBMIT
 
         footer
             include includes/footer/footer.pug  

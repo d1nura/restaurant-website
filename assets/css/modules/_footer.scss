@@ -10,11 +10,11 @@ footer {
 }
 
 .email {
-  background: rgb(117, 86, 95);
+  background: #dce4e7;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-content: center;
-  color: rgb(184, 182, 182);
+  color: black;
 
   h1 {
     font-size: 2.8rem;
@@ -44,7 +44,7 @@ footer {
 
   input {
     border: none;
-    border-bottom: 2px solid rgb(184, 182, 182);
+    border-bottom: 2px solid rgb(2, 2, 2);
     width: 65%;
     //height: 4rem;
     outline: none;
@@ -53,7 +53,7 @@ footer {
     background: none;
   }
   button {
-    @include btnSelect(rgb(184, 182, 182), rgb(184, 182, 182), 30%, 2.2rem);
+    @include btnSelect(rgb(5, 5, 5), rgb(3, 3, 3), 30%, 2.2rem);
     margin-top: 1rem;
   }
 }
@@ -65,7 +65,7 @@ footer {
 .rest {
   display: grid;
   grid-template-columns: 70% 30%;
-  background: rgb(247, 231, 227);
+  background: #d5dddb;
   //border: 1px solid rgb(94, 255, 0);
 }
 
