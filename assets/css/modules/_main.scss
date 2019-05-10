@@ -45,6 +45,18 @@ $main-color: rgb(240, 235, 227);
   }
 }
 
+@mixin inputBox() {
+  background: none;
+  border: 2px solid black;
+  outline: none;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+
 * {
   margin: 0;
   padding: 0;

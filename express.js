@@ -27,4 +27,8 @@ app.get("/reservations", (req, res) => {
   res.render("reservations");
 });
 
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
 app.listen(PORT, () => console.log(`listening on port ${PORT}...`));

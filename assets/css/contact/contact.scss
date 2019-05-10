@@ -1,0 +1,86 @@
+@import "../modules/main";
+
+body {
+  background: $main-color;
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 4.4rem 100% auto;
+  background: $main-color;
+  @include navColor();
+  @include screenSize(960px) {
+    grid-template-rows: 4.4rem auto;
+  }
+  @include screenSize(426px) {
+    grid-template-rows: 8% auto;
+  }
+}
+
+.contactText {
+  //border: 1px solid red;
+  @include textEffect();
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+
+  #together {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 49%;
+    }
+  }
+  input {
+    @include inputBox();
+    box-sizing: border-box;
+  }
+
+  textarea {
+    @include inputBox();
+    box-sizing: border-box;
+    height: 7rem;
+  }
+  button {
+    @include btnSelect(black, black, 35%, 2.5rem);
+    transition: 0.5s;
+    font-size: 1.1rem;
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+}
+
+.contactPic {
+  background: url("/pics/chef1.jpg");
+  @include bacImg();
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  @include screenSize(960px) {
+    grid-template-rows: 500px auto;
+    grid-template-columns: 100%;
+
+    .contactText {
+      order: 1;
+      padding: 2.5rem 0 2.5rem 0;
+    }
+    .contactPic {
+      order: 0;
+    }
+  }
+  @include screenSize(426px) {
+    grid-template-rows: 400px auto;
+    .contactText {
+      padding: 1rem 0 2.5rem 0;
+    }
+  }
+}

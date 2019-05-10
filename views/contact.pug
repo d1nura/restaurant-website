@@ -1,0 +1,27 @@
+include includes/header.pug 
+
+link(rel="stylesheet", href="css/contact/contact.css")
+
+body
+    .contact
+        header
+            include includes/menu/fullMenu.pug 
+
+        .contactForm
+            .contactText
+                h1 CONTACT US
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusamus sit, iste consequatur itaque similique molestiae quae eveniet, commodi perferendis voluptas quibusdam. Ullam quasi voluptate ad reiciendis officia odio explicabo.
+                #together
+                    input(type="text" placeholder="First Name")
+                    input(type="text" placeholder="Last Name")
+                input(type="text" placeholder="Email")
+                textarea(placeholder="Message")
+                button SEND 
+            .contactPic
+
+
+
+        footer
+            include includes/footer/footer.pug   
+
+    script(type="module" src="/scripts/index.js")         

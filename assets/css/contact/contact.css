@@ -1,0 +1,835 @@
+@import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
+nav {
+  position: relative;
+  position: fixed;
+  width: 100%;
+  height: 4.4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav img {
+  position: absolute;
+  color: white;
+  left: 48%;
+  right: 48%;
+  width: 2rem;
+  margin: 0 auto;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav button {
+  position: absolute;
+  right: 2.5rem;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: white;
+  border: 2px solid white;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav button:hover {
+  background: white;
+  color: black;
+}
+
+.hamMenu {
+  position: fixed;
+  width: 2.8rem;
+  height: 1.8rem;
+  margin: 1.3rem 0 0 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamMenu .line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hamMenu:hover #top {
+  width: 80%;
+}
+
+.hamMenu:hover #middle {
+  width: 60%;
+}
+
+.hamMenu:hover #bottom {
+  width: 80%;
+}
+
+@media screen and (max-width: 426px) {
+  .hamMenu {
+    width: 2.5rem;
+    height: 1.5rem;
+    margin: 4% 0 0 5%;
+  }
+}
+
+.toggleHam {
+  width: 4rem;
+  height: 3rem;
+  z-index: 1000;
+}
+
+.toggleHam:hover #top,
+.toggleHam:hover #bottom {
+  width: 100%;
+}
+
+.toggleHam .line {
+  background: black;
+  width: 100%;
+}
+
+.toggleHam #top {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.toggleHam #middle {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 0;
+}
+
+.toggleHam #bottom {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+@media screen and (max-width: 426px) {
+  nav {
+    height: 8%;
+  }
+  nav button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: black;
+    background: white;
+    width: 100%;
+    height: 8%;
+    border: 1px solid silver;
+  }
+  nav img {
+    margin: 0;
+    left: 87%;
+  }
+}
+
+.hiddenMenu {
+  position: fixed;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 35%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.hiddenMenu button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin: 1rem 0 0 2.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: inline;
+}
+
+.hiddenMenu #ulList {
+  margin-top: 5.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hiddenMenu #ulList a {
+  display: block;
+  margin-left: 2.5rem;
+  font-size: 2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-weight: bold;
+  width: 100%;
+  line-height: 3.8rem;
+  color: black;
+}
+
+@media screen and (max-width: 960px) {
+  .hiddenMenu {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .hiddenMenu {
+    width: 100%;
+  }
+}
+
+.toggleMenu {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 60% 100%;
+      grid-template-rows: 60% 100%;
+}
+
+@media screen and (max-width: 426px) {
+  footer {
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+}
+
+.email {
+  background: #dce4e7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: black;
+}
+
+.email h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.email p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+}
+
+#emailText {
+  padding-left: 3.5rem;
+}
+
+#emailInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 10%;
+  padding-top: 1rem;
+}
+
+#emailInput input {
+  border: none;
+  border-bottom: 2px solid #020202;
+  width: 65%;
+  outline: none;
+  padding: 0 0 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  background: none;
+}
+
+#emailInput button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: #030303;
+  border: 2px solid #050505;
+  width: 30%;
+  height: 2.2rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 960px) {
+  .email #emailText,
+  .email #emailInput {
+    padding-top: 5% 10% 5% 10%;
+  }
+  .email #emailText input,
+  .email #emailInput input {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .email h1 {
+    font-size: 1.5rem;
+  }
+  .email #emailInput,
+  .email #emailText {
+    padding: 10% 5% 10% 5%;
+  }
+  .email #emailInput input,
+  .email #emailText input {
+    width: 80%;
+  }
+  .email #emailInput {
+    padding-top: 0;
+  }
+  .email #emailText {
+    padding-bottom: 4%;
+  }
+}
+
+.rest {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  background: #d5dddb;
+}
+
+#firstPart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 55% 5%;
+      grid-template-rows: 30% 55% 5%;
+}
+
+#firstPart h1 {
+  margin-left: 3.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 4rem;
+}
+
+#firstPart #flex1 {
+  margin: 0 2rem 0 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#firstPart #flex1 h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#firstPart #flex1 h4 {
+  margin: 0.5rem 0 0rem 0;
+  font-size: 1.2rem;
+}
+
+#firstPart #flex1 p {
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+
+#firstPart #flex1 button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  padding: 5% 10% 5% 10%;
+  margin: 0.5rem 0 0.8rem 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#firstPart #flex1 button:hover {
+  background: black;
+  color: white;
+}
+
+#firstPart #flex1 address {
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+#firstPart #social {
+  margin-left: 3.5rem;
+}
+
+#firstPart #social img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+#secondPart {
+  background: url("/pics/ps.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#secondPart:hover {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+@media screen and (max-width: 426px) {
+  .rest .rest {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .rest #firstPart {
+    width: 100%;
+    padding: 8%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .rest #firstPart h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 4%;
+  }
+  .rest #firstPart h3 {
+    margin: 4% 0 4% 0;
+  }
+  .rest #firstPart #flex1 {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .rest #firstPart #social {
+    margin: 8% 0 8% 0;
+  }
+  .rest #secondPart {
+    width: 0;
+  }
+}
+
+.hiddenReservation {
+  width: 35%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background: #e9fde6;
+  z-index: 20;
+  overflow-y: scroll;
+}
+
+.hiddenReservation img {
+  width: 2.5rem;
+  padding: 5%;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  z-index: 10;
+}
+
+@media screen and (max-width: 960px) {
+  .hiddenReservation {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .hiddenReservation {
+    width: 100%;
+  }
+}
+
+.resToggle {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+#calender {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -ms-grid-rows: 1.5rem (2rem)[6];
+      grid-template-rows: 1.5rem repeat(6, 2rem);
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#calender #date {
+  border: 0.1px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#calender #date p {
+  margin-top: 0.35rem;
+}
+
+.dateHover {
+  cursor: pointer;
+}
+
+.dateHover:hover {
+  background: black;
+  color: white;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box h1 {
+  width: 80%;
+  margin-bottom: 4%;
+  margin-left: 5%;
+  letter-spacing: 0.2rem;
+  font-size: 2.5rem;
+}
+
+.box h3 {
+  width: 80%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+
+#selectBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5%;
+  margin-bottom: 7%;
+}
+
+#selectBox select {
+  width: 50%;
+  height: 2.5rem;
+  font-size: 1rem;
+  background: none;
+  border: 2px solid black;
+  outline: none;
+}
+
+#selectBox select option {
+  outline: 2px solid black;
+  border: 2px solid black;
+}
+
+#selectBox #lunch {
+  border-right: none;
+}
+
+#pBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+#pBox span {
+  margin-right: 0.4em;
+}
+
+#pBox p {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#calenderBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.same2 {
+  width: 80%;
+  margin-left: 5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body {
+  background: #f0ebe3;
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 4.4rem 100% auto;
+      grid-template-rows: 4.4rem 100% auto;
+  background: #f0ebe3;
+}
+
+.contact nav {
+  background: black;
+}
+
+@media screen and (max-width: 426px) {
+  .contact {
+    -ms-grid-rows: 8% 100% auto;
+        grid-template-rows: 8% 100% auto;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact {
+    -ms-grid-rows: 4.4rem auto;
+        grid-template-rows: 4.4rem auto;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .contact {
+    -ms-grid-rows: 8% auto;
+        grid-template-rows: 8% auto;
+  }
+}
+
+.contactText {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 80%;
+}
+
+.contactText h1 {
+  font-size: 3rem;
+  margin-bottom: 5%;
+}
+
+.contactText p {
+  word-spacing: 0.2rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  margin-bottom: 5%;
+}
+
+.contactText #together {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactText #together input {
+  width: 49%;
+}
+
+.contactText input {
+  background: none;
+  border: 2px solid black;
+  outline: none;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contactText textarea {
+  background: none;
+  border: 2px solid black;
+  outline: none;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 7rem;
+}
+
+.contactText button {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: black;
+  border: 2px solid black;
+  width: 35%;
+  height: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.contactText button:hover {
+  color: white;
+  background: black;
+}
+
+.contactPic {
+  background: url("/pics/chef1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contactForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .contactForm {
+    -ms-grid-rows: 500px auto;
+        grid-template-rows: 500px auto;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .contactForm .contactText {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 2.5rem 0 2.5rem 0;
+  }
+  .contactForm .contactPic {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .contactForm {
+    -ms-grid-rows: 400px auto;
+        grid-template-rows: 400px auto;
+  }
+  .contactForm .contactText {
+    padding: 1rem 0 2.5rem 0;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
