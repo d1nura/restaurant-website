@@ -1,11 +1,6 @@
 @import "../modules/main";
 
-header {
-  //@include navColor();
-}
-
 .reservations {
-  //background: rgb(3, 3, 3);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -14,7 +9,7 @@ header {
   grid-template-rows: 4.4rem 100% auto auto;
   @include navColor();
   @include screenSize(426px) {
-    grid-template-rows: 4.4rem auto;
+    grid-template-rows: 8% auto;
   }
 }
 
@@ -35,22 +30,27 @@ header {
   }
 }
 #resT {
+  @include screenSize(960px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% auto;
+    .resText {
+      order: 2;
+      //padding: 1rem 0 1rem 0;
+    }
+    .resPic {
+      order: 1;
+    }
+  }
   @include screenSize(426px) {
     //border: 1px solid red;
     grid-template-columns: 100%;
     grid-template-rows: 400px auto;
 
     .resText {
-      order: 2;
       padding: 1rem 0 1rem 0;
       h1 {
         font-size: 2.5rem;
       }
-      p {
-      }
-    }
-    .resPic {
-      order: 1;
     }
   }
 }
@@ -77,6 +77,10 @@ header {
     p {
       margin-bottom: 2%;
     }
+  }
+  @include screenSize(960px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% auto;
   }
 
   @include screenSize(426px) {

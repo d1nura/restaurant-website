@@ -644,7 +644,7 @@ footer {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", "Ubuntu";
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -686,8 +686,8 @@ nav {
 
 @media screen and (max-width: 426px) {
   .reservations {
-    -ms-grid-rows: 4.4rem auto;
-        grid-template-rows: 4.4rem auto;
+    -ms-grid-rows: 8% auto;
+        grid-template-rows: 8% auto;
   }
 }
 
@@ -727,6 +727,25 @@ nav {
   margin-bottom: 5%;
 }
 
+@media screen and (max-width: 960px) {
+  #resT {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 50% auto;
+        grid-template-rows: 50% auto;
+  }
+  #resT .resText {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #resT .resPic {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 @media screen and (max-width: 426px) {
   #resT {
     -ms-grid-columns: 100%;
@@ -735,18 +754,10 @@ nav {
         grid-template-rows: 400px auto;
   }
   #resT .resText {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
     padding: 1rem 0 1rem 0;
   }
   #resT .resText h1 {
     font-size: 2.5rem;
-  }
-  #resT .resPic {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
 }
 
@@ -796,6 +807,15 @@ nav {
 #resP .formText h1,
 #resP .formText p {
   margin-bottom: 2%;
+}
+
+@media screen and (max-width: 960px) {
+  #resP {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 50% auto;
+        grid-template-rows: 50% auto;
+  }
 }
 
 @media screen and (max-width: 426px) {

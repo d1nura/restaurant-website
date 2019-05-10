@@ -8,8 +8,11 @@
   grid-template-columns: 100%;
   grid-template-rows: 4.4rem 100% auto;
   @include navColor();
+  @media screen and (max-width: 960px) {
+    grid-template-rows: 4.4rem auto;
+  }
   @media screen and (max-width: 426px) {
-    grid-template-rows: 8% 190% auto;
+    grid-template-rows: 8% auto;
   }
 }
 
@@ -17,7 +20,7 @@
   background: $main-color;
   display: grid;
   grid-template-columns: 50% 50%;
-  overflow: hidden;
+  //overflow: hidden;
   #menuT {
     justify-self: center;
     align-self: center;
@@ -28,15 +31,29 @@
     background: url("/pics/menu.jpg");
     @include bacImg();
   }
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 500px;
+    #menuT {
+      order: 2;
+      padding: 1rem 0 1rem 0;
+    }
+    #menuP {
+      order: 1;
+    }
+  }
 
   @media screen and (max-width: 426px) {
     grid-template-columns: 100%;
-    grid-template-rows: 40% auto;
-
+    grid-template-rows: 400px auto;
+    padding: 1rem 0 1rem 0;
     #menuT {
       order: 2;
-      width: 90%;
-      padding: 10%;
+      width: 80%;
+      margin-top: 1rem;
+    }
+    #menuP {
+      order: 1;
     }
   }
 }

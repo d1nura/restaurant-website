@@ -9,7 +9,10 @@
   grid-template-rows: 4.4rem 100% auto;
   //border: 1px solid red;
   @include navColor();
-  @media screen and (max-width: 426px) {
+  @include screenSize(960px) {
+    grid-template-rows: 4.4rem auto;
+  }
+  @include screenSize(426px) {
     grid-template-rows: 8% auto;
   }
 }
@@ -20,8 +23,16 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   background: $main-color;
+  @include screenSize(960px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 500px auto;
+    #aboutT {
+      order: 2;
+      padding: 2rem 0 2rem 0;
+    }
+  }
 
-  @media screen and (max-width: 426px) {
+  @include screenSize(426px) {
     grid-template-columns: 100%;
     grid-template-rows: 0.5fr 1fr;
 
