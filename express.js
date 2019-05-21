@@ -2,7 +2,7 @@ let express = require("express");
 let app = express();
 let fs = require("fs");
 
-const PORT = 3001;
+const PORT = 3000;
 
 let content = fs.readFileSync("newsData.json");
 let jsonCnt = JSON.parse(content);
@@ -29,6 +29,10 @@ app.get("/reservations", (req, res) => {
 
 app.get("/contact", (req, res) => {
   res.render("contact");
+});
+
+app.get("/news", (req, res) => {
+  res.render("news");
 });
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}...`));

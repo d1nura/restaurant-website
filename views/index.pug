@@ -44,20 +44,9 @@ body
         button READ MORE 
       #menuPic
 
-    .gallery#same1
-      -for (i=0;i<5;i++)
-        div(class="story")
-          .storyBlc
-            h2 #{Object.values(obj)[i].title}
-            h3 #{Object.values(obj)[i].heading}
-            p #{Object.values(obj)[i].p}
-            button READ MORE
-          div(class="colorSet")    
-
-    
-      h1 CONTINUE READING OUR NEWS #[a(href="#") #[u HERE]] 
-         
-    
+    .gallery
+      include includes/newsSect.pug
+        
     footer
       include includes/footer/footer.pug   
 

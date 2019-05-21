@@ -668,124 +668,46 @@ nav {
   transition: 0.5s;
 }
 
-.reservations {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: 4.4rem 100% auto auto;
-      grid-template-rows: 4.4rem 100% auto auto;
-}
-
-.reservations nav {
-  background: black;
-}
-
-@media screen and (max-width: 426px) {
-  .reservations {
-    -ms-grid-rows: 8% 100% auto;
-        grid-template-rows: 8% 100% auto;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  .reservations {
-    -ms-grid-rows: 8% auto;
-        grid-template-rows: 8% auto;
-  }
-}
-
-#resT {
+.gallery {
   background: #f0ebe3;
+  position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
 }
 
-#resT .resPic {
-  background: url("/pics/res1.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#resT .resText {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  width: 80%;
-}
-
-#resT .resText h1 {
+.gallery h1 {
+  padding: 5% 0 0 5%;
   font-size: 3rem;
-  margin-bottom: 5%;
 }
 
-#resT .resText p {
-  word-spacing: 0.2rem;
-  letter-spacing: 0.05rem;
-  line-height: 1.5rem;
-  margin-bottom: 5%;
+.gallery h1 a {
+  color: black;
 }
 
 @media screen and (max-width: 960px) {
-  #resT {
+  .gallery {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 50% auto;
-        grid-template-rows: 50% auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
   }
-  #resT .resText {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  #resT .resPic {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  #resT {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 400px auto;
-        grid-template-rows: 400px auto;
-  }
-  #resT .resText {
-    padding: 1rem 0 1rem 0;
-  }
-  #resT .resText h1 {
+  .gallery h1 {
     font-size: 2.5rem;
+    padding: 5%;
   }
 }
 
-#resP {
+.story {
   position: relative;
-  background: mediumslateblue;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-}
-
-#resP .formPic {
-  background: url("/pics/res2.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#resP .formText {
-  background: #f0ebe3;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -796,102 +718,100 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10%;
 }
 
-#resP .formText h1 {
-  font-size: 3rem;
-  margin-bottom: 5%;
+.story .storyBlc {
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  padding: 5%;
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
 }
 
-#resP .formText p {
-  word-spacing: 0.2rem;
-  letter-spacing: 0.05rem;
-  line-height: 1.5rem;
-  margin-bottom: 5%;
-}
-
-#resP .formText h1,
-#resP .formText p {
-  margin-bottom: 2%;
-}
-
-@media screen and (max-width: 960px) {
-  #resP {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 50% auto;
-        grid-template-rows: 50% auto;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  #resP {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: 500px auto;
-        grid-template-rows: 500px auto;
-  }
-}
-
-form {
-  margin: 5% 0 5% 0;
-}
-
-form input,
-form select {
-  background: none;
-  border: 2px solid black;
-  outline: none;
-  height: 2.5rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  font-size: 1.2rem;
-  padding-left: 0.5rem;
-  margin-top: 0.2rem;
-}
-
-form #email,
-form #mobile {
-  display: block;
-  width: 100%;
-}
-
-form button {
+.story button {
   cursor: pointer;
   background: none;
   outline: none;
-  color: black;
-  border: 2px solid black;
-  width: 35%;
-  height: 2.5rem;
+  color: white;
+  border: 2px solid white;
+  width: 40%;
+  height: 1.5rem;
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.1rem;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#compact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.story button:hover {
+  background: white;
+  color: black;
 }
 
-#compact #c {
+@media screen and (max-width: 960px) {
+  .story button {
+    margin-bottom: 3rem;
+  }
+}
+
+.story h2 {
+  border-bottom: 1px solid white;
+  margin-bottom: 2%;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.story h3 {
+  letter-spacing: 0.4rem;
+}
+
+.story p {
+  margin: 1% 0 5% 0;
+  font-size: 1.2rem;
+  word-spacing: 0.5rem;
+}
+
+.story:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.story:hover .storyBlc {
+  opacity: 1;
+  color: white;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.story:hover .colorSet {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 960px) {
+  .story {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+  .story .storyBlc {
+    opacity: 1;
+    color: white;
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  .story .colorSet {
+    opacity: 0.6;
+  }
+}
+
+.colorSet {
+  position: absolute;
+  background: #030303;
   width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
 }
-
-#compact select {
-  color: #727272;
-  width: 105%;
-  height: 2.7rem;
-}
-
-#compact #c:nth-child(1),
-#compact #fName {
-  margin-right: 2.5rem;
-}
-
-label {
-  letter-spacing: 0.1rem;
-}
-/*# sourceMappingURL=reservations.css.map */
+/*# sourceMappingURL=news.css.map */

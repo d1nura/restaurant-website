@@ -170,7 +170,8 @@ nav button:hover {
   width: 35%;
   height: 100%;
   background: white;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 100;
 }
 
@@ -185,7 +186,7 @@ nav button:hover {
   text-align: center;
   font-weight: bold;
   letter-spacing: 0.1rem;
-  margin: 1rem 0 0 2.5rem;
+  margin: 1rem 0 3rem 2.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   display: inline;
 }
@@ -223,6 +224,12 @@ nav button:hover {
 .toggleMenu {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+@media screen and (max-width: 426px) {
+  .hiddenMenu {
+    overflow-y: scroll;
+  }
 }
 
 footer {
