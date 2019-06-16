@@ -35,4 +35,6 @@ app.get("/news", (req, res) => {
   res.render("news");
 });
 
-app.listen(PORT, () => console.log(`listening on port ${PORT}...`));
+app.listen(process.env.PORT || PORT, () =>
+  console.log(`listening on port ${PORT}...`)
+);
