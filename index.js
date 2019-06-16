@@ -8,6 +8,7 @@ let jsonCnt = JSON.parse(content);
 app.use(express.static(__dirname + "/assets"));
 
 app.set("view engine", "pug");
+app.set("port",process.env.PORT)
 
 app.get("/", (req, res) => {
   res.render("index", { obj: jsonCnt });
@@ -33,6 +34,6 @@ app.get("/news", (req, res) => {
   res.render("news");
 });
 
-app.listen(process.env.PORT || 3000, () =>
-  console.log(`listening on port ${http.address().port}`)
+app.listen(app.get('port'), () =>
+  console.log(`listening on port ${app.get('port')}`)
 );
