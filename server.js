@@ -2,8 +2,6 @@ let express = require("express");
 let app = express();
 let fs = require("fs");
 
-const PORT = 3000;
-
 let content = fs.readFileSync("newsData.json");
 let jsonCnt = JSON.parse(content);
 
@@ -35,6 +33,6 @@ app.get("/news", (req, res) => {
   res.render("news");
 });
 
-app.listen(process.env.PORT || PORT, () =>
-  console.log(`listening on port ${PORT}...`)
+app.listen(process.env.PORT || 3000, () =>
+  console.log(`listening on port ${http.address().port}`)
 );
