@@ -382,14 +382,15 @@ footer {
   font-size: 1.5rem;
 }
 
-#firstPart #flex1 h4 {
+#firstPart #flex1 h5 {
   margin: 0.5rem 0 0rem 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #firstPart #flex1 p {
   line-height: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 #firstPart #flex1 button {
@@ -417,6 +418,7 @@ footer {
 #firstPart #flex1 address {
   font-style: normal;
   font-size: 1.1rem;
+  width: 95%;
 }
 
 #firstPart #social {
@@ -426,6 +428,12 @@ footer {
 #firstPart #social img {
   width: 2rem;
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 426px) {
+  #firstPart #social img {
+    margin-bottom: 2rem;
+  }
 }
 
 #secondPart {

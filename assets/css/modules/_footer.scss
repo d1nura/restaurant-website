@@ -73,7 +73,7 @@ footer {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 30% 55% 5%;
-  //border: 1px solid purple;
+  // border: 1px solid purple;
   h1 {
     // border: 1px solid red;
     margin-left: 3.5rem;
@@ -89,13 +89,14 @@ footer {
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
     }
-    h4 {
+    h5 {
       margin: 0.5rem 0 0rem 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     p {
       line-height: 1.5rem;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
     button {
       @include btnSelect(black, black, auto, auto);
@@ -110,13 +111,20 @@ footer {
     address {
       font-style: normal;
       font-size: 1.1rem;
+      width: 95%;
     }
   }
   #social {
+    //border: 1px solid red;
     margin-left: 3.5rem;
     img {
       width: 2rem;
       margin-right: 1rem;
+    }
+    @media screen and (max-width: 426px) {
+      img {
+        margin-bottom: 2rem;
+      }
     }
   }
 }
